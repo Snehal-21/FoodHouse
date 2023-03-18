@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHouse</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    #screen{
+        width:100%;
+        /* border:2px solid red; */
+        background-color: black;
+    }
+    #main{
+        width:70%;
+        border:2px solid green;
+        margin: auto;
+        background-color: rgb(204,204,204);
+    }
+    #main2{
+        width:88%;
+        /* height:500px; */
+        /* border:2px solid red; */
+        margin:auto;
+        /* margin-bottom: -10px; */
+    }
+    #backimage{
+        width:100%;
+        height:100%;
+        border:2px solid yellow;
+        background-image: url(https://templatemo.com/templates/templatemo_539_simple_house/img/simple-house-01.jpg);
+        background-size: 100% 500px ;
+        background-repeat: no-repeat;
+        margin-bottom: 50px;
+    }
+    #navbar{
+        height:100px;
+        width:88%;
+        /* border:3px solid white; */
+        margin-left: 78px;
+        margin-top: 350px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #navbar >div{
+        width:40%;
+        /* border:3px solid red; */
+    }
+    #leftnav{
+        width:100%;
+        /* border:2px solid pink; */
+        display: flex;
+        justify-content:space-between;
+    }
+    #leftnav >div:nth-child(1){
+        width:20%;
+        /* border: 2px solid blue; */
+    }
+    #leftnav >div:nth-child(1) > img{
+        height:70px;
+        width:70px;
+        margin-top: 20px;
+    }
+    #leftnav >div:nth-child(2){
+        width:80%;
+        color:white;
+    }
+    #leftnav >div:nth-child(2) >p:nth-child(1){
+        font-size: 40px; 
+        margin-bottom: 10px;
+    }
+    #leftnav >div:nth-child(2) >p:nth-child(2){
+    font-size:20px ;
+    }
+    #rightnav{
+        width:100%;
+        /* border:2px solid pink; */
+        display: flex;
+        /* justify-content:; */
+        margin-top: 30px;
+    }
+    #rightnav >div{
+        width:100%;
+        /* border:2px solid green; */
+        display: flex;
+        color: white;
+        justify-content: right;
+    }
+    #rightnav >div >div{
+        width:25%;
+        text-align: center;
+        font-size: 25px;
+    }
+    #houseinfo{
+        width: 100%;
+        background-color: white;
+        margin-top: -60px;
+    }
+    #houseinfo > div:nth-child(1) {
+    width:60%;
+    /* border:2px solid red; */
+    margin:auto;
+    }
+    #houseinfo > div:nth-child(1) >h1{
+        font-size: 35px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-top: 50px;
+    }
+    #houseinfo > div:nth-child(1) >p{
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.5;
+        color: rgb(64, 63, 63);
+    }
+    #houseinfo > div:nth-child(1) > div{
+        width:60%;
+        /* border:2px solid ; */
+        margin-left: 200px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        height:120px;
+        /* margin-bottom: 50px; */
+    }
+    #houseinfo > div:nth-child(1) > div > div{
+        width:28%;
+        height: 50px;
+        border:2px solid rgb(45,151,106);
+    }
+    #houseinfo > div:nth-child(1) > div > div >p{
+        font-size: 25px;
+        margin-top: 10px;
+        margin-left: 22px;
+        color:rgb(45,151,106);
+    }
+    #houseinfo > div:nth-child(1) > div > div >p:nth-child(2){
+        color:rgb(45,151,106);
+    }
+    #houseinfo > div:nth-child(1) > div > div:nth-child(1) > p{
+        color:white;
+    }
+    #houseinfo > div:nth-child(1) > div > div:nth-child(1){
+        background-color:rgb(45,151,106);
+    }
+    #housefood{
+        width:100%;
+        /* border:2px solid pink; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: white;
+        /* margin-bottom: 30px; */
+        /* margin-top: 50px; */
+    }
+    #housefood > div{
+        height:500px;
+        width:22%;
+        /* border:2px solid yellow; */
+        margin-bottom: 20px;
+        /* margin-top: -60px; */
+    }
+    #housefood > div >img{
+        width:100%;
+        margin-bottom: 20px;
+    }
+    #housefood > div >p:nth-child(2){
+        color:rgb(26,108,154);
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    #housefood > div >p:nth-child(3){
+        color:grey;
+        font-size: 17px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    #housefood > div >p:nth-child(4){
+        color:rgb(26,108,154);
+        font-size: 20px;
+    }
+    #housefooter{
+        background-color: white;
+    }
+    #housefooter > div{
+        width:95%;
+        height:250px;
+        /* border:2px solid black; */
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    #housefooter > div >div{
+        width:48%;
+        margin-top: 50px;
+        /* border:2px solid green; */
+
+    }
+    #housefooter > div >div:nth-child(1)>img{
+        width:100%;
+        height:100%;
+    }
+    #housefooter > div >div:nth-child(2) >p:nth-child(1){
+        font-size: 30px;
+        color:rgb(26,108,154);
+        margin-bottom: 20px;
+    }
+    #housefooter > div >div:nth-child(2) >p:nth-child(2){
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 60px;
+    }
+    #housefooter > div >div:nth-child(2) >button{
+        height:40px;
+        width:100px;
+        margin-left: 450px;
+    }
+    #housefooter >p:nth-child(2){
+        margin-top: 40px;
+        text-align: center;
+        padding-bottom: 20px;
+        color: grey;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div id="screen">
+        <div id="main">
+            <div id="main2">
+                <div id="backimage">
+                    <div id="navbar">
+                        <div>
+                            <div id="leftnav">
+                                <div>
+                                    <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/simple-house-logo.png" alt="logo"/>
+                                </div>
+                               <div>
+                                <p>Simple House</p>
+                                <p>new ewstaurant template</p>
+                               </div>
+                            </div>
+                        </div>
+                            <div>
+                                <div id="rightnav">
+                                    <div>
+                                        <div><u>Home</u></div>
+                                        <div>About</div>
+                                        <div>Contact</div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div id="houseinfo">
+                    <div>
+                        <h1>Welcome to Simple House</h1>
+                        <p>Total 3 HTML pages are included in this template. Header image has a parallax effect. You can feel free to download, edit and use this TemplateMo layoyut for your commercial or non-commercial websites.</p>
+                        <div>
+                            <div><p>Pizza</p></div>
+                            <div><p>Salad</p></div>
+                            <div><p>Noodle</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="housefood">
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/gallery/01.jpg" alt="food1"/>
+                        <p>Fuse dictum finibus</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse reprehenderit, eaque voluptatibus iure odio.</p>
+                        <p>$45/ $55</p>
+                    </div>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/gallery/02.jpg" alt="food1"/>
+                        <p>Aliquam sagittis</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse reprehenderit, eaque voluptatibus iure odio.</p>
+                        <p>$65/ $70</p>
+                    </div>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/gallery/03.jpg" alt="food1"/>
+                        <p>Sed varius turpis</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse reprehenderit, eaque voluptatibus iure odio.</p>
+                        <p>$30.50</p>
+                    </div>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/gallery/04.jpg" alt="food1"/>
+                        <p>Alliquam sagittis</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse reprehenderit, eaque voluptatibus iure odio.</p>
+                        <p>$25.50</p>
+                    </div>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/gallery/05.jpg" alt="food1"/>
+                        <p>Maecenas eget justo</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse reprehenderit, eaque voluptatibus iure odio.</p>
+                        <p>$80.25</p>
+                    </div>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/gallery/06.jpg" alt="food1"/>
+                        <p>Quisque et felis eros</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse reprehenderit, eaque voluptatibus iure odio.</p>
+                        <p>$20/ $40/ $60</p>
+                    </div>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/gallery/07.jpg" alt="food1"/>
+                        <p>Sed ultericies dui</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse reprehenderit, eaque voluptatibus iure odio.</p>
+                        <p>$94</p>
+                    </div>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/gallery/08.jpg" alt="food1"/>
+                        <p>Donec porta consequat</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse reprehenderit, eaque voluptatibus iure odio.</p>
+                        <p>$15</p>
+                    </div>
+                </div>
+                <div id="housefooter">
+                   <div>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_539_simple_house/img/img-01.jpg" alt="footerimage"/>
+                    </div>
+                    <div>
+                        <p>Maecenas nulla neque</p>
+                        <p>Redistributing this tempkate as a downloadable zip file on any tempklate collection site is strictly prohibited. You willned to <u>talk to us</u> additionl permissions about our templates. Thank you.</p>
+                        <button>Read More</button>
+                    </div>
+                   </div>
+                   <p>Copyright @ 2020 Simple House | Design:TemplateMo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
